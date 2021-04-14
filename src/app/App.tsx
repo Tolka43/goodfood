@@ -1,15 +1,11 @@
 import './App.scss';
-import Main from './components/Main';
+import Main from './components/Main/Main';
 
 function App() {
   return (
-    <div className='App container-lg pt-5'>
-      <div className='row'>
-        <div className='col'>
-          <Main />
-        </div>
+      <div className='App'>
+            <Main />
       </div>
-    </div>
   );
 }
 

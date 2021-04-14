@@ -1,13 +1,12 @@
 import './App.scss';
-import Hello from './components/Hello';
+import Main from './components/Main';
 
 function App() {
   return (
-    <div className='App container p-5'>
+    <div className='App container-lg pt-5'>
       <div className='row'>
-        <div className='col'>Column</div>
         <div className='col'>
-          <Hello text='Hello!' />
+          <Main />
         </div>
       </div>
     </div>

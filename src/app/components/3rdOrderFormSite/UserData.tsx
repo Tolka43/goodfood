@@ -11,18 +11,21 @@ const UserDataForm = ({ setUserName }: userDataProps) => {
   return (
     <div className='container-lg px-5'>
       <div className='row justify-content-center'>
+        <div className='col-lg d-grid'>
         <button
           onClick={() => userEmail.length > 2 ? setFormSiteNumber(4) : alert('wpisz e-mail')}
           type='button'
-          className='btn btn-outline-dark col-lg-12'
+          className='btn btn-outline-dark'
         >
           ZATWIERDŹ
         </button>
+        </div>
       </div>
-      <form className='row justify-content-center'>
-        <div className='m-3 col-lg-12'>
+      <div className='row'>
+      <form className='col-lg'>
+        <div className='m-3'>
           <label htmlFor='emailInput' className='form-label'>
-            Email address
+            adres email
           </label>
           <input
             onChange={event => setUserEmail(event.target.value)}
@@ -32,7 +35,7 @@ const UserDataForm = ({ setUserName }: userDataProps) => {
             aria-describedby='emailHelp'
           />
         </div>
-        <div className='m-3 col-lg-12'>
+        <div className='m-3'>
           <label htmlFor='nameInput' className='form-label'>
             Imię
           </label>
@@ -44,6 +47,7 @@ const UserDataForm = ({ setUserName }: userDataProps) => {
           />
         </div>
       </form>
+      </div>
     </div>
   );
 };

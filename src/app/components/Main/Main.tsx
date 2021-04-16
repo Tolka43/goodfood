@@ -2,7 +2,8 @@ import OfferDiv from '../OfferDiv/OfferDiv';
 import FoodPhotosCarousel from '../FoodPhotosCarousel/FoodPhotosCarousel';
 import './Main.scss';
 import OrderForm from '../OrderForm/OrderForm';
-import { useState, createContext, useRef } from 'react';
+import { useState, createContext, useRef, RefObject } from 'react';
+
 interface formSites {
   formSiteNumber: number;
   setFormSiteNumber: (value: number) => void;
@@ -13,19 +14,22 @@ const defaultValue: formSites = {
   setFormSiteNumber: () => {},
 };
 
-
 export const FormSitesContext = createContext<formSites>(defaultValue);
+export const FormRefContext = createContext<RefObject<HTMLDivElement>>(
+  undefined as any
+);
 
 const Main = () => {
-  const formRef = useRef<HTMLElement>(null)
+  const formRef = useRef<HTMLDivElement>(null);
   const [formSiteNumber, setFormSiteNumber] = useState(1);
+
   return (
-    <>
+    <FormRefContext.Provider value={formRef}>
       <FormSitesContext.Provider value={{ formSiteNumber, setFormSiteNumber }}>
         <div className='container-lg'>
           <div className='row'>
             <div className='carousel-div py-5 col-12'>
-              <FoodPhotosCarousel formRef={formRef}/>
+              <FoodPhotosCarousel/>
             </div>
           </div>
         </div>
@@ -33,10 +37,10 @@ const Main = () => {
           <OfferDiv />
         </div>
         <div className='form p-5'>
-          <OrderForm formRef={formRef}/>
+          <OrderForm />
         </div>
       </FormSitesContext.Provider>
-    </>
+    </FormRefContext.Provider>
   );
 };
 

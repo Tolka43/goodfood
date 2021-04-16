@@ -4,16 +4,14 @@ import spices from '../../images/spices.jpg';
 import pizza from '../../images/pizza.jpg';
 import './FoodPhotosCarousel.scss';
 import { useContext } from 'react';
-import { FormSitesContext } from '../Main/Main';
+import { FormSitesContext, FormRefContext } from '../Main/Main';
 
-interface foodPhotoCarouselProps {
-  formRef: any;
-}
-
-const FoodPhotosCarousel = ({formRef}:foodPhotoCarouselProps) => {
+const FoodPhotosCarousel = () => {
   const { setFormSiteNumber } = useContext(FormSitesContext);
+  const formRef = useContext(FormRefContext);
+
   return (
-    <Carousel>
+    <Carousel nextLabel={''} prevLabel={''}>
       <Carousel.Item interval={5000}>
         <img
           className='d-block w-100'
@@ -26,9 +24,7 @@ const FoodPhotosCarousel = ({formRef}:foodPhotoCarouselProps) => {
           <button
             onClick={() => {
               setFormSiteNumber(2);
-              formRef.current.scrollIntoView({
-                behavior: 'smooth',
-              });
+              formRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}
             type='button'
             className='btn btn-outline-light'

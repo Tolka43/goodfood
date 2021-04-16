@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { cardsObj } from './OptionsCards';
 
 // nie rozumiem czemu nie działa ten interface i dlatego jest any
-interface optionCardProps {
+interface OptionCardProps {
   card: cardsObj;
   choosedArr: number[];
-  setChoosedArr: (value: number) => void;
+  setChoosedArr: (value: number[]) => void;
 }
 
-const OptionCard = ({ card, choosedArr, setChoosedArr }: any) => {
-  const [choosed, setChoosed] = useState<boolean>(false);
+const OptionCard = ({ card, choosedArr, setChoosedArr }: OptionCardProps) => {
+  const [choosed, setChoosed] = useState(false);
   return (
     <div className='col-lg-3 py-5'>
       <div

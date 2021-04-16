@@ -5,7 +5,11 @@ import UserDataForm from '../3rdOrderFormSite/UserData';
 import config from '../config';
 import './OrderForm.scss';
 
-const OrderForm = () => {
+interface orderFormProps {
+  formRef: any;
+}
+
+const OrderForm = ({formRef}:orderFormProps) => {
   const { formSiteNumber, setFormSiteNumber } = useContext(FormSitesContext);
   const [userName, setUserName] = useState<string>('Hej');
   const [choosedArr, setChoosedArr] = useState<number[]>([]);
@@ -13,7 +17,7 @@ const OrderForm = () => {
   switch (formSiteNumber) {
     case 1:
       return (
-        <div className='container-lg px-5'>
+        <div ref={formRef} className='container-lg px-5'>
           <div className='row justify-content-center'>
             <button
               onClick={() => setFormSiteNumber(2)}
@@ -27,7 +31,7 @@ const OrderForm = () => {
       );
     case 2:
       return (
-        <OptionCards choosedArr={choosedArr} setChoosedArr={setChoosedArr} />
+        <OptionCards formRef={formRef} choosedArr={choosedArr} setChoosedArr={setChoosedArr} />
       );
     case 3:
       return <UserDataForm setUserName={setUserName} />;

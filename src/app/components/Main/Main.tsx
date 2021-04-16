@@ -2,7 +2,7 @@ import OfferDiv from '../OfferDiv/OfferDiv';
 import FoodPhotosCarousel from '../FoodPhotosCarousel/FoodPhotosCarousel';
 import './Main.scss';
 import OrderForm from '../OrderForm/OrderForm';
-import { useState, createContext } from 'react';
+import { useState, createContext, useRef } from 'react';
 interface formSites {
   formSiteNumber: number;
   setFormSiteNumber: (value: number) => void;
@@ -13,9 +13,11 @@ const defaultValue: formSites = {
   setFormSiteNumber: () => {},
 };
 
+
 export const FormSitesContext = createContext<formSites>(defaultValue);
 
 const Main = () => {
+  const formRef = useRef<any>(null)
   const [formSiteNumber, setFormSiteNumber] = useState(1);
   return (
     <>
@@ -23,7 +25,7 @@ const Main = () => {
         <div className='container-lg'>
           <div className='row'>
             <div className='carousel-div py-5 col-12'>
-              <FoodPhotosCarousel />
+              <FoodPhotosCarousel formRef={formRef}/>
             </div>
           </div>
         </div>
@@ -31,7 +33,7 @@ const Main = () => {
           <OfferDiv />
         </div>
         <div className='form p-5'>
-          <OrderForm />
+          <OrderForm formRef={formRef}/>
         </div>
       </FormSitesContext.Provider>
     </>

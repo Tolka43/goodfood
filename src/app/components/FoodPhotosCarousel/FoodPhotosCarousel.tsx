@@ -6,11 +6,15 @@ import './FoodPhotosCarousel.scss';
 import { useContext } from 'react';
 import { FormSitesContext } from '../Main/Main';
 
-const FoodPhotosCarousel = () => {
+interface foodPhotoCarouselProps {
+  formRef: any;
+}
+
+const FoodPhotosCarousel = ({formRef}:foodPhotoCarouselProps) => {
   const { setFormSiteNumber } = useContext(FormSitesContext);
   return (
     <Carousel>
-      <Carousel.Item interval={4000}>
+      <Carousel.Item interval={5000}>
         <img
           className='d-block w-100'
           src={vegetableBorder}
@@ -20,7 +24,12 @@ const FoodPhotosCarousel = () => {
           <h3>Sprawdź jak można jeść zdrowo, smacznie i róznorodnie!</h3>
           <p>Zamów e-book już teraz</p>
           <button
-          onClick={() => setFormSiteNumber(2)}
+            onClick={() => {
+              setFormSiteNumber(2);
+              formRef.current.scrollIntoView({
+                behavior: 'smooth',
+              });
+            }}
             type='button'
             className='btn btn-outline-light'
           >

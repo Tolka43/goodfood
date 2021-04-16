@@ -11,7 +11,7 @@ const OfferDiv = () => (
         Co znajdziesz w naszym e-booku?
       </h2>
     </div>
-    <div className='row'>
+    <div className='row px-3'>
       <div className='col-lg-3 plate'>
         <img src={sandwich} alt='' />
         <h4 className='text-center'>

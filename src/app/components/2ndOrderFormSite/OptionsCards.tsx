@@ -3,10 +3,10 @@ import OptionCard from './OptionCard';
 import './OptionCards.scss';
 import { FormSitesContext } from '../Main/Main';
 import config from '../config'
-
 interface optionCardsProps {
   choosedArr: number[];
   setChoosedArr?: (value: number[]) => void;
+  formRef: any;
 }
 
 export interface cardsObj {
@@ -15,12 +15,12 @@ export interface cardsObj {
   title: string;
 }
 
-const OptionCards = ({choosedArr, setChoosedArr}:optionCardsProps) => {
+const OptionCards = ({choosedArr, setChoosedArr, formRef}:optionCardsProps) => {
   const {setFormSiteNumber} = useContext(FormSitesContext)
   // const [choosedArr, setChoosedArr] = useState<number[]>([]);
 
   return (
-    <div className='container-lg px-5'>
+    <div ref={formRef} className='container-lg'>
       <div className='row justify-content-center'>
         {choosedArr.length > 0 ? (
           <button

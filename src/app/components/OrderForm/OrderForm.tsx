@@ -4,12 +4,14 @@ import OptionCards from '../2ndOrderFormSite/OptionsCards';
 import UserDataForm from '../3rdOrderFormSite/UserData';
 import config from '../config';
 import './OrderForm.scss';
+import { faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface orderFormProps {
   formRef: any;
 }
 
-const OrderForm = ({formRef}:orderFormProps) => {
+const OrderForm = ({ formRef }: orderFormProps) => {
   const { formSiteNumber, setFormSiteNumber } = useContext(FormSitesContext);
   const [userName, setUserName] = useState<string>('Hej');
   const [choosedArr, setChoosedArr] = useState<number[]>([]);
@@ -31,16 +33,28 @@ const OrderForm = ({formRef}:orderFormProps) => {
       );
     case 2:
       return (
-        <OptionCards formRef={formRef} choosedArr={choosedArr} setChoosedArr={setChoosedArr} />
+        <OptionCards
+          formRef={formRef}
+          choosedArr={choosedArr}
+          setChoosedArr={setChoosedArr}
+        />
       );
     case 3:
       return <UserDataForm setUserName={setUserName} />;
     case 4:
       return (
-        <h3 className='p-5 text-center summary'>{`${userName}, dziękujemy za zaufanie! Zamówiłeś e-book: ${config.cards
-          .filter((card: any) => choosedArr.includes(card.id))
-          .map(card => card.title)
-          .map(title => title)}`}</h3>
+        <div className='p-4 text-center summary'>
+          <h3>{`${userName}, dziękujemy za zaufanie! Zamówiłeś e-book: 
+            `}</h3>
+          {config.cards
+            .filter((card: any) => choosedArr.includes(card.id))
+            .map(card => card.title)
+            .map(title => (
+              <>
+                <h5 className='mt-2'><FontAwesomeIcon icon={faUtensils} /> {title}</h5>
+              </>
+            ))}
+        </div>
       );
     default:
       return <div></div>;

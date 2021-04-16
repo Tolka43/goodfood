@@ -12,7 +12,7 @@ const UserDataForm = ({ setUserName }: userDataProps) => {
     <div className='container-lg px-5'>
       <div className='row justify-content-center'>
         <button
-          onClick={() => userEmail.length > 1 ? setFormSiteNumber(4) : alert('wpisz e-mail')}
+          onClick={() => userEmail.length > 2 ? setFormSiteNumber(4) : alert('wpisz e-mail')}
           type='button'
           className='btn btn-outline-dark col-lg-12'
         >

@@ -25,20 +25,19 @@ const OfferDiv = () => (
       </div>
       <div className='col-lg-3 plate'>
         <img src={salad} alt='' />
-        <h4 className='text-center'>
-          kolorowe przekąski, sałatki, przystawki
-        </h4>
+        <h4 className='text-center'>kolorowe przekąski, sałatki, przystawki</h4>
         <p className='text-center'>
-          Gdy w ciągu dnia najdzie ochota na słodycze czy słone przekąski warto mieć pod ręką szybkie przepisy na ich zdrowsze wersje. {' '}
+          Śniadanie to według nas najważniejszy posiłek. Od niego zaczynamy
+          dzień, a więc warto zadbać by dodał jak najwięcej energii oraz chęci
+          do działania.{' '}
         </p>
       </div>
       <div className='col-lg-3 plate'>
         <img src={oats} alt='' />
-        <h4 className='text-center'>
-          coś co wszyscy kochamy, słodkości
-        </h4>
+        <h4 className='text-center'>coś co wszyscy kochamy, słodkości</h4>
         <p className='text-center'>
-          Gdy w ciągu dnia najdzie ochota na słodycze czy słone przekąski warto mieć pod ręką szybkie przepisy na ich zdrowsze wersje. {' '}
+          Gdy w ciągu dnia najdzie ochota na słodycze warto mieć pod ręką
+          szybkie przepisy na ich zdrowsze wersje.{' '}
         </p>
       </div>
       <div className='col-lg-3 plate'>

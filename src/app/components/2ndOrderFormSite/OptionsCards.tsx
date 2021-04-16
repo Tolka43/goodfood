@@ -17,7 +17,6 @@ export interface cardsObj {
 
 const OptionCards = ({choosedArr, setChoosedArr, formRef}:optionCardsProps) => {
   const {setFormSiteNumber} = useContext(FormSitesContext)
-  // const [choosedArr, setChoosedArr] = useState<number[]>([]);
 
   return (
     <div ref={formRef} className='container-lg'>

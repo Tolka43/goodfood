@@ -17,7 +17,7 @@ const defaultValue: formSites = {
 export const FormSitesContext = createContext<formSites>(defaultValue);
 
 const Main = () => {
-  const formRef = useRef<any>(null)
+  const formRef = useRef<HTMLElement>(null)
   const [formSiteNumber, setFormSiteNumber] = useState(1);
   return (
     <>

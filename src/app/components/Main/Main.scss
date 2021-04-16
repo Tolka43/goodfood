@@ -1,4 +1,5 @@
 
+
 .offer-div {
   min-height: 90vh;
   width: 100%;
@@ -6,6 +7,19 @@
 }
 
 .form {
-  min-height: 70vh;
-  background-color: rgb(116, 104, 116);
+  min-height: 100vh;
+  background-image: url('../../images/marble-spoons.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  // background-color: rgb(116, 104, 116);
+}
+
+.dark-button {
+  color: white;
+  background-image: url(../../images/dark-marble.jpg);
+
+  background-size: cover;
+  position: relative;
 }

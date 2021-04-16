@@ -12,7 +12,7 @@ const OfferDiv = () => (
       </h2>
     </div>
     <div className='row'>
-      <div className='col-lg-3'>
+      <div className='col-lg-3 plate'>
         <img src={sandwich} alt='' />
         <h4 className='text-center'>
           pełnowartościowe śniadania na słono i słodko
@@ -23,7 +23,7 @@ const OfferDiv = () => (
           do działania.{' '}
         </p>
       </div>
-      <div className='col-lg-3'>
+      <div className='col-lg-3 plate'>
         <img src={salad} alt='' />
         <h4 className='text-center'>
           kolorowe przekąski, sałatki, przystawki
@@ -32,7 +32,7 @@ const OfferDiv = () => (
           Gdy w ciągu dnia najdzie ochota na słodycze czy słone przekąski warto mieć pod ręką szybkie przepisy na ich zdrowsze wersje. {' '}
         </p>
       </div>
-      <div className='col-lg-3'>
+      <div className='col-lg-3 plate'>
         <img src={oats} alt='' />
         <h4 className='text-center'>
           coś co wszyscy kochamy, słodkości
@@ -41,7 +41,7 @@ const OfferDiv = () => (
           Gdy w ciągu dnia najdzie ochota na słodycze czy słone przekąski warto mieć pod ręką szybkie przepisy na ich zdrowsze wersje. {' '}
         </p>
       </div>
-      <div className='col-lg-3'>
+      <div className='col-lg-3 plate'>
         <img src={muffins} alt='' />
         <h4 className='text-center'>
           pełnowartościowe śniadania na słono i słodko

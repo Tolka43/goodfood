@@ -10,7 +10,7 @@ const UserDataForm = ({ setUserName }: userDataProps) => {
   const { setFormSiteNumber } = useContext(FormSitesContext);
   return (
     <div className='container-lg px-5'>
-      <div className='row justify-content-center'>
+      <div className='row'>
         <div className='col-lg d-grid'>
         <button
           onClick={() => userEmail.length > 2 ? setFormSiteNumber(4) : alert('wpisz e-mail')}

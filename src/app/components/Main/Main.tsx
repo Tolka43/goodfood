@@ -28,7 +28,7 @@ const Main = () => {
       <FormSitesContext.Provider value={{ formSiteNumber, setFormSiteNumber }}>
         <div className='container-lg'>
           <div className='row'>
-            <div className='carousel-div py-5 col-12'>
+            <div className='carousel-div py-5 col'>
               <FoodPhotosCarousel/>
             </div>
           </div>

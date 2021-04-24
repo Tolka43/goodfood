@@ -6,8 +6,8 @@ import './OfferDiv.scss';
 
 const OfferDiv = () => (
   <div className='container-lg'>
-    <div className='row justify-content-md-center'>
-      <h2 className='col-12 text-center p-5'>
+    <div className='row'>
+      <h2 className='col text-center p-5'>
         Co znajdziesz w naszym e-booku?
       </h2>
     </div>

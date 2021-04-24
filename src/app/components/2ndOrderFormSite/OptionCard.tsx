@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { cardsObj } from './OptionsCards';
-
-// nie rozumiem czemu nie działa ten interface i dlatego jest any
 interface OptionCardProps {
   card: cardsObj;
   choosedArr: number[];

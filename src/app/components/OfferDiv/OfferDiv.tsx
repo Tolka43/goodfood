@@ -7,13 +7,13 @@ import './OfferDiv.scss';
 const OfferDiv = () => (
   <div className='container-lg'>
     <div className='row'>
-      <h2 className='col text-center p-5'>
-        Co znajdziesz w naszym e-booku?
-      </h2>
+      <h2 className='col text-center p-5'>Co znajdziesz w naszym e-booku?</h2>
     </div>
     <div className='row px-3'>
       <div className='col-lg-3 plate'>
-        <img src={sandwich} alt='' />
+        <div className='d-flex justify-content-center'>
+          <img src={sandwich} alt='' />
+        </div>
         <h4 className='text-center'>
           pełnowartościowe śniadania na słono i słodko
         </h4>
@@ -24,7 +24,9 @@ const OfferDiv = () => (
         </p>
       </div>
       <div className='col-lg-3 plate'>
-        <img src={salad} alt='' />
+        <div className='d-flex justify-content-center'>
+          <img src={salad} alt='' />
+        </div>
         <h4 className='text-center'>kolorowe przekąski, sałatki, przystawki</h4>
         <p className='text-center'>
           Jeśli trafiłeś na tę stronę oznacza to, że tak jak my, jesteś
@@ -33,7 +35,9 @@ const OfferDiv = () => (
         </p>
       </div>
       <div className='col-lg-3 plate'>
-        <img src={oats} alt='' />
+        <div className='d-flex justify-content-center'>
+          <img src={oats} alt='' />
+        </div>
         <h4 className='text-center'>coś co wszyscy kochamy, słodkości</h4>
         <p className='text-center'>
           Gdy w ciągu dnia najdzie ochota na słodycze warto mieć pod ręką
@@ -41,7 +45,9 @@ const OfferDiv = () => (
         </p>
       </div>
       <div className='col-lg-3 plate'>
-        <img src={muffins} alt='' />
+        <div className='d-flex justify-content-center'>
+          <img src={muffins} alt='' />
+        </div>
         <h4 className='text-center'>i mnóstwo innych pyszności</h4>
         <p className='text-center'>
           Inspiracje z wszystkich kuchni świata, starannie dobrane i dokładnie

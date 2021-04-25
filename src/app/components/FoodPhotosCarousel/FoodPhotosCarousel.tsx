@@ -14,7 +14,7 @@ const FoodPhotosCarousel = () => {
     <Carousel nextLabel={''} prevLabel={''}>
       <Carousel.Item interval={5000}>
         <img
-          className='d-block w-100'
+          className='d-block w-100 carousel-img'
           src={vegetableBorder}
           alt='First slide'
         />
@@ -34,7 +34,11 @@ const FoodPhotosCarousel = () => {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={4000}>
-        <img className='d-block w-100' src={spices} alt='Second slide' />
+        <img
+          className='d-block w-100 carousel-img'
+          src={spices}
+          alt='Second slide'
+        />
         <Carousel.Caption>
           <h3>Poznaj bogactwo smaków</h3>
           <p>
@@ -44,7 +48,11 @@ const FoodPhotosCarousel = () => {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img className='d-block w-100 pizza' src={pizza} alt='Third slide' />
+        <img
+          className='d-block w-100 carousel-img pizza'
+          src={pizza}
+          alt='Third slide'
+        />
         <Carousel.Caption>
           <h3>Przepisy na każdą okazję</h3>
           <p>Znajdziesz tu wszystko - od słodkich deserów po wytrawne obiady</p>

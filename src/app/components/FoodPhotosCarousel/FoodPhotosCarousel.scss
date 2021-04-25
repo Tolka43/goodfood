@@ -1,8 +1,8 @@
-img {
+.carousel-img {
   &.pizza {
     object-position: 50% 90%;
   }
-  max-height: 80vh;
+  height: 90vh;
   width: 100%;
   object-fit: cover;
   object-position: 50% 20%;
